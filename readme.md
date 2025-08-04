@@ -15,7 +15,7 @@ Code in `./apo`, where:
 - `mutations/` contains the objects in the paper, where `_eval.pkl` store the consistencies on test set.  
 # Data. 
 ## Files. 
-- Raw machine-annotated data is in `data/AIME` and `data/MATH`. (raw Human part is omitted, directly refer to the annotated files). 
+- Raw machine-annotated data is omitted, directly refer to the annotated files. 
 - Machine-annotated data is in `machine_annotations/`. 
 - Human-annotated data is under `human_annotations/`. 
 - Post-answer-check data is in `post_answer_check_data/`.
@@ -23,6 +23,9 @@ Code in `./apo`, where:
 Except the meta-data from original AIME and Human data, the data format is unified as follows:
 ```json
 {
+    "reasoning": raw reasoning content,
+    "question": question content,
+    "True Answer": true answer content,
     "steps": {
         "reasoning": {
             "1": {
